@@ -1,0 +1,89 @@
+============================================================================================
+create database studentsResultManagement;
+use studentsResultManagement;
+
+create table credentials(
+username varchar(30) primary key,
+password varchar(30)
+);
+
+insert into credentials values('admin1','12345678');
+insert into credentials values('admin2','12345678');
+
+create table students(
+RollNumber varchar(10) primary key,
+Sname varchar(30),
+CourseName varchar(30),
+Branch varchar(30),
+DateOfBirth date,
+Gender varchar(10),
+Address varchar(100),
+city varchar(20)
+);
+
+create table studentsCredentials(
+RollNumber varchar(10) primary key,
+password varchar(10)
+);
+
+create table btechIt(
+RollNumber varchar(10) primary key,
+Maths int check(Maths >=0 and Maths <= 100),
+Physics int check(Physics >=0 and Physics <=100),
+cao int check(cao >=0 and cao <=100),
+os int check(os >=0 and os <=100),
+cn int check(cn >=0 and cn <=100),
+db int check(db >=0 and db <=100)
+);
+
+create table btechCse(
+RollNumber varchar(10) primary key,
+Maths int check(Maths >=0 and Maths <=100),
+Ajava int check(Ajava >=0 and Ajava <=100),
+cao int check(cao >=0 and cao <=100),
+os int check(os >=0 and os <= 100),
+oops int check(oops >=0 and oops <=100),
+db int check(db >=0 and db <=100)
+);
+
+create table beMech(
+RollNumber varchar(10) primary key,
+Maths int check(Maths >=0 and Maths <=100),
+Ms int check(Ms >=0 and Ms <=100),
+Td int check(Td >=0 and Td <=100),
+Fm int check(Fm >=0 and Fm <=100),
+Tom int check(Tom >=0 and Tom <=100),
+Ed int check(Ed >=0 and Ed <= 100)
+);
+
+create table beCivil(
+RollNumber varchar(10) primary key,
+Maths int check(Maths >=0 and Maths <=100),
+Ms int check(Ms >=0 and Ms <=100),
+survey int check(survey >=0 and Survey <=100),
+Ct int check(Ct >=0 and ct <=100),
+Sa int check(sa >=0 and sa <=100),
+Ed int check(Ed >=0 and Ed <= 100)
+);
+
+create table beEee(
+RollNumber varchar(10) primary key,
+Maths int check(Maths >=0 and Maths <=100),
+Ms int check(Ms >=0 and Ms <=100),
+Cs int check(cs >=0 and Cs <=100),
+Eft int check(eft >=0 and eft <=100),
+Ce int check(ce >=0 and Ce <=100),
+Csc int check(csc >=0 and Csc <= 100)
+);
+
+create table Mba(
+RollNumber varchar(10) primary key,
+Ent int check(Ent >=0 and Ent <=100),
+Fm int check(fm >=0 and Fm <=100),
+Hrm int check(hrm >=0 and Hrm <=100),
+Ms int check(ms >=0 and Ms <=100),
+Sm int check(sm >=0 and Sm <=100),
+Mm int check(mm >=0 and Mm <=100)
+);
+
+=================================================================================================
